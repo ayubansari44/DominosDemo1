@@ -1,0 +1,331 @@
+<section> 
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class=carousel-indicators>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner">
+
+
+
+<div class="carousel-item active" >
+  <div class="overlay-image" style="background-image:url(../../assets/unsp2.jpg) ;" ></div>
+  <div class="container">
+    <h1>Double Cheese Margherita</h1>
+    <p>Yes cheese burst is one of the most delicious taste amoung the pizzas.
+      People who are fond of cheese love margherita and cheese burst pizza base a lot.</p>
+       <a href="#" routerLink="/statistics" class="btn btn-lg btn-primary">
+         Order now
+       </a>
+  </div>
+</div>
+
+<div class="carousel-item ">
+  <div class="overlay-image" style="background-image:url(../../assets/unsp3.jpg) ;" ></div>
+  <div class="container">
+    <h1>Veg Extravaganza</h1>
+    <p>A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, 
+      succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around.</p>
+       <a href="#" routerLink="/statistics" class="btn btn-lg btn-primary">
+         Order now
+       </a>
+  </div>
+</div>
+
+<div class="carousel-item ">
+  <div class="overlay-image" style="background-image:url(../../assets/unsp4.jpg) ;" ></div>
+
+  <div class="container">
+    <h1>Mexican Green Waver</h1>
+    <p>A pizza loaded with crunchy onions, crisp capsicum, juicy tomatoes and jalapeno with a liberal sprinkling of exotic Mexican herbs.
+    </p>
+       <a href="#" routerLink="/statistics" class="btn btn-lg btn-primary">
+         Order now
+       </a>
+  </div>
+</div>
+
+<div class="carousel-item ">
+  <div class="overlay-image" style="background-image:url(../../assets/chickgold.jpg) ;" ></div>
+  <div class="container">
+    <h1>Chicken Golden Delight</h1>
+    <p>At Chicken Delight we’ve been proudly serving customers delicious food for more than 60 years. We hand-bread and marinate fresh,
+      locally farmed chicken with our great-tasting coating. </p>
+       <a href="#" routerLink="/statistics" class="btn btn-lg btn-primary">
+         Order now
+       </a>
+  </div>
+</div>
+
+<div class="carousel-item ">
+  <div class="overlay-image" style="background-image:url(../../assets/chickbarb.jpg) ;" ></div>
+  <div class="container">
+    <h1>Pepper Barbecue Chicken</h1>
+    <p>Try this Barbecue Pizza Chicken Bake when you need some delicious low-carb comfort food that the whole family is going to love!</p>
+       <a href="#" routerLink="/statistics" class="btn btn-lg btn-primary">
+         Order now
+       </a>
+  </div>
+</div>
+
+<div class="carousel-item ">
+  <div class="overlay-image" style="background-image:url(../../assets/chickendom.jpg) ;" ></div>
+  <div class="container">
+    <h1>Chicken Dominator</h1>
+    <p>Yes cheese burst is one of the most delicious taste amoung the pizzas.
+      People who are fond of cheese love margherita and cheese burst pizza base a lot.</p>
+       <a href="#" routerLink="/statistics" class="btn btn-lg btn-primary">
+         Order now
+       </a>
+  </div>
+</div>
+
+</div>
+
+<a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+  <span class="sr-only">Previous</span>
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+</a>
+<a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+  <span class="sr-only">Previous</span>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+</a>
+</div> 
+</section>
+
+
+
+
+<section class="orderp">
+      <mat-horizontal-stepper linear>
+        <mat-step [stepControl]="formGroup1">
+          <form [formGroup]="formGroup1">
+            
+            <strong>
+
+              <h2>Personal Details</h2>
+            </strong>
+
+            <mat-form-field>
+              <input matInput placeholder="Enter First Name" formControlName="firstCtlr" >
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Enter Last Name" formControlName="firstCtlr" >
+            </mat-form-field>
+            <br>
+      
+            <mat-form-field class="gend" appearance="fill">
+              <mat-label>Gender</mat-label>
+              <mat-select [formControl]="genders" multiple>
+                <mat-select-trigger>
+                  {{genders.value ? genders.value[0] : ''}}
+                  <span *ngIf="genders.value?.length > 1" class="example-additional-selection">
+                    (+{{genders.value.length - 1}} {{genders.value?.length === 2 ? 'other' : 'others'}})
+                  </span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let gender of genderList" [value]="gender">{{gender}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+        <br>
+            
+            <mat-form-field>
+              <input matInput placeholder="Enter Email Id" formControlName="firstCtlr">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Enter Phone Number" formControlName="firstCtlr" > 
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Enter Address" formControlName="firstCtlr" >
+            </mat-form-field>
+            <br>
+            <br>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </form>
+        </mat-step>
+      
+
+  
+  <mat-step [stepControl]="formGroup2">
+    <form [formGroup]="formGroup2">
+      <strong>
+        <h2>Main Menu</h2>
+
+      </strong>
+      
+
+      <br>
+
+    <button mat-raised-button mat-button [matMenuTriggerFor]   ="menu" style="margin: -5px;">Veg Pizza</button>
+  <mat-menu #menu="matMenu">
+  <button mat-menu-item>Margherita</button>
+  <button mat-menu-item>Double Cheese Margherita</button>
+  <button mat-menu-item>Peppy Paneer</button>
+  <button mat-menu-item>Mexican Green Wave</button>
+  <button mat-menu-item>Veg Extravaganza</button>
+</mat-menu>
+
+<br>
+<br>
+<br>
+<button mat-raised-button mat-button [matMenuTriggerFor]   ="menu2" style="margin: -5px;">Non-Veg Pizza</button>
+<mat-menu #menu2="matMenu">
+<button mat-menu-item>Chicken Golden Delight</button>
+<button mat-menu-item>Chicken Pepperoni</button>
+<button mat-menu-item>Chicken Fiesta</button>
+<button mat-menu-item>Pepper Barbecue Chicken</button>
+<button mat-menu-item>Indi Chicken Tikka</button>
+<button mat-menu-item>Chicken Dominator</button>
+</mat-menu>
+<br>
+<br>
+<br>
+
+      <br>
+      <button mat-raised-button color="accent" matStepperPrevious style="margin: -5px;">Back</button>
+      <button mat-raised-button color="primary" matStepperNext style="margin: 15px;">Next</button>
+</form>
+</mat-step>
+
+
+
+<mat-step [stepControl]="formGroup3">
+  <form [formGroup]="formGroup3">
+    <strong>
+      <h2>Toppings, Beverages and Desserts</h2>
+
+    </strong>
+<br>
+    <mat-form-field appearance="fill">
+      <mat-label>Toppings</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value ? toppings.value[0] : ''}}
+          <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+            (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+<br>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Beverages</mat-label>
+      <mat-select [formControl]="beverages" multiple>
+        <mat-select-trigger>
+          {{beverages.value ? beverages.value[0] : ''}}
+          <span *ngIf="beverages.value?.length > 1" class="example-additional-selection">
+            (+{{beverage.value.length - 1}} {{beverages.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let beverage of beverageList" [value]="beverage">{{beverage}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+<br>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Desserts</mat-label>
+      <mat-select [formControl]="deserts" multiple>
+        <mat-select-trigger>
+          {{deserts.value ? deserts.value[0] : ''}}
+          <span *ngIf="deserts.value?.length > 1" class="example-additional-selection">
+            (+{{deserts.value.length - 1}} {{deserts.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let desert of desertList" [value]="desert">{{desert}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+ 
+
+    
+    <br>
+    <br>
+
+      <br>
+      <button mat-raised-button color="accent" matStepperPrevious style="margin: -5px;">Back</button>
+      <button mat-raised-button color="primary" matStepperNext style="margin: 10px;">Next</button>
+</form>
+</mat-step>
+
+
+ <mat-step [stepControl]="formGroup4">
+  <form [formGroup]="formGroup4">
+    <strong>
+      
+      <h2>Payment</h2>
+    </strong>
+    <br>
+
+<button mat-raised-button  style="margin: -5px;">Card Payment</button>
+
+<br>
+<br>   
+     <br>
+<button mat-raised-button mat-button [matMenuTriggerFor]   ="menu4" style="margin: -5px;">Net Banking</button>
+<mat-menu #menu4="matMenu">
+  <button href="https://codedec.com/" mat-menu-item >State Bank of India</button>
+  <button mat-menu-item>Axis Bank</button>
+  <button mat-menu-item>Bank of Baroda</button>
+  <button mat-menu-item>HDFC Bank</button>
+  <button mat-menu-item>Union Bank</button>
+  <button mat-menu-item>Punjab National Bank</button>
+</mat-menu>
+    <br>
+    <br>   
+     <br>
+<button mat-raised-button mat-button [matMenuTriggerFor]   ="menu5" style="margin: -5px;">UPI</button>
+<mat-menu #menu5="matMenu">
+<button mat-menu-item>PhonePe</button>
+<button mat-menu-item>Google Pay</button>
+<button mat-menu-item>Paytm</button>
+<button mat-menu-item>MobiKwik</button>
+
+</mat-menu>
+     <br>   
+     <br>
+     <br>
+<button mat-raised-button mat-button style="margin: -5px;">Cash On Delivery</button>
+
+
+    <br>
+     
+    <br>
+
+      <br>
+      <button mat-raised-button color="accent" matStepperPrevious style="margin: 5px;">Back</button>
+      <button mat-raised-button color="primary" matStepperNext style="margin: 10px;">Next</button>
+</form>
+</mat-step>
+
+<mat-step [stepControl]="formGroup5">
+  <form [formGroup]="formGroup5">
+    <h1>Congratulations on placing the order! </h1>
+    
+    
+    
+    <br>
+    <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+    
+</form>
+</mat-step> 
+</mat-horizontal-stepper>
+</section> 
+
+<!-- <footer style="background: #342b8d;" class="page-footer font-small blue">
+ 
+  <div class="footer-copyright text-center py-3">Copyright @ 2021 - Dominos
+  </div>
+</footer> -->
+      
+      
+      
